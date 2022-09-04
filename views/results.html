@@ -1,0 +1,18 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th>Link</th>
+      <th>Valid</th>
+      <th>Online</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% for(var i = 0; i < results.length; i++) { %>
+    <tr class="<%= results[i].online ? 'is-selected' : '' %>">
+      <td><a href="<%= results[i].url %>"><%= results[i].url %></a></td>
+      <td><%= results[i].valid %></td>
+      <td><%= results[i].online %></td>
+    </tr>
+    <% } %>
+  </tbody>
+</table>

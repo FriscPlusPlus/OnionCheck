@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
+    <title>OnionCheck</title>
+
+    <link href="css/bulma.min.css" rel="stylesheet" media="screen" />
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="/">
+        <p class="logo"><span id="onion">Onion</span><span id="check">Check</span></p>
+      </a>
+
+      <a
+        role="button"
+        class="navbar-burger"
+        aria-label="menu"
+        aria-expanded="false"
+      >
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+  </nav>
+  <body>
+    <div class="container">
+      <div class="is-centered">
+        <div class="column is-narrow has-text-centered">
+          <%- body %>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="content has-text-centered">
+        <p>
+          <div>
+          <strong>OnionCheck</strong> by
+          <a href="https://github.com/Friscas">Friscas</a>. The source code is
+          licensed <a href="https://opensource.org/licenses/GPL-3.0">GPL3</a>.
+        </div>
+        <a href="https://github.com/Friscas"><img src="img/github.png" /></a>
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
