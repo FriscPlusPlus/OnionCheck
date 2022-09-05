@@ -3,6 +3,12 @@ html {
   overflow-y: hidden;
   overflow: auto;
   max-height: 100%;
+  scroll-behavior: smooth;
+  scrollbar-width: none; /* for Firefox */
+}
+
+html::-webkit-scrollbar {
+  display: none; /* for Chrome, Safari, and Opera */
 }
 
 p {
@@ -57,6 +63,42 @@ p {
 }
 
 .customPadding {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
+  padding-top: 4rem;
+}
+
+#donate {
+  height: 80vh;
+  padding-top: 11vh;
+}
+
+#donate > div {
+  justify-content: center;
+  display: flex;
+}
+
+.rotate {
+  word-break: unset;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  position: relative;
+  bottom: 6px;
+}
+
+.MaxHeight {
+  max-height: 250px;
+}
+
+.thanksText {
+  font-size: xxx-large;
+  font-weight: bold;
+  font-family: Ubuntu, "times new roman", times, roman, serif !important;
+}
+
+.codeCustom {
+  background-color: blanchedalmond !important;
+}
+
+.breakWord {
+  word-break: break-all;
+  color: #363636;
 }
