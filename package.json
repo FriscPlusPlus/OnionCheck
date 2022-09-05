@@ -6,7 +6,9 @@
 	"email": "nejohnson2@gmail.com",
 	"url": "http://www.nejohnson2.com"
   },
-  
+  "scripts": {
+    "start": "nodemon app.js"
+  },
   "version": "0.0.1",
   "dependencies": {
     "express": "3.x",
