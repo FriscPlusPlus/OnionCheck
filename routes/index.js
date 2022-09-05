@@ -7,7 +7,7 @@ const cleanLinks = (aLinks) => {
     lengthCount = aLinks.length > 10 ? 10 : aLinks.length,
     link;
   for (i = 0; i < lengthCount; i++) {
-    link = addProtocl(aLinks[i].replace("\r", "").replace(" ", ""));
+    link = addProtocl(aLinks[i].replace("\r", ""));
     cleanUrls.push({
       url: link,
       valid: isValidUrl(link),
@@ -30,7 +30,7 @@ const isValidUrl = (urlString) => {
     if (urlString.split(".")[1] !== "onion") {
       urlString = false;
     }
-    return Boolean(new URL(urlString));
+    return Boolean(new URL(urlString.replace(" ", "")));
   } catch (e) {
     return false;
   }
@@ -61,7 +61,6 @@ exports.main = function (req, res) {
 
 exports.check = async function (req, res) {
   let aLinks = cleanLinks(req.body.links.split("\n"));
-  console.log(aLinks);
   let results = await check(aLinks);
   res.render("results.html", { results });
 };

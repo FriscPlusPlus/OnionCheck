@@ -11,43 +11,43 @@
   <link href="css/style.css" rel="stylesheet" />
   <link href="css/ubuntu.css" rel="stylesheet" />
 </head>
-<nav class="navbar is-warning" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-    <a class="navbar-item" href="/">
-      <p class="logo"><img src="img/onion.png" /><span id="onion">Onion</span><span id="check">Check</span></p>
-    </a>
-  </div>
 
-  <div class="navbar-menu" id="main-nav">
-    <div class="navbar-start">
+<body>
+  <nav class="navbar is-warning is-fixed-top" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
       <a class="navbar-item" href="/">
-        Home
-      </a>
-      <a class="navbar-item" href="https://github.com/Friscas/OnionCheck/issues/new?assignees=&labels=&template=bug_report.md&title=" target="_blank">
-        Report an issue
+        <p class="logo"><img src="img/onion.png" /><span id="onion">Onion</span><span id="check">Check</span></p>
       </a>
     </div>
   
-
-  <div class="navbar-end">
-    <div class="navbar-item">
-      <div class="buttons">
-        <a class="button is-danger">
-          <strong>DONATE!</strong>
+    <div class="navbar-menu" id="main-nav">
+      <div class="navbar-start">
+        <a class="navbar-item" href="/">
+          Home
+        </a>
+        <a class="navbar-item" href="https://github.com/Friscas/OnionCheck/issues/new?assignees=&labels=&template=bug_report.md&title=" target="_blank">
+          Report an issue
         </a>
       </div>
+    
+  
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="buttons">
+          <a class="button is-danger">
+            <strong>DONATE</strong>
+          </a>
+        </div>
+      </div>
+    </div>
     </div>
   </div>
-  </div>
-</div>
-</nav>
-
-<body>
-  <div class="container">
+  </nav>
+  <div class="container customHeight">
     <%- body %>
   </div>
 
-  <footer class="footer">
+  <footer class="footer customFooter is-fixed-bottom">
     <div class="content has-text-centered">
       <p>
       <div>
