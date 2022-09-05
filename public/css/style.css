@@ -7,7 +7,7 @@ footer {
 }
 
 #onion {
-  color: #f4b41a;
+  color: #ff4500;
 }
 
 #check {
@@ -17,6 +17,7 @@ footer {
 .logo {
   font-size: x-large;
   font-family: fantasy;
+  display: flex;
 }
 
 html {
