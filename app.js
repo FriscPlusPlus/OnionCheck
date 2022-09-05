@@ -22,6 +22,9 @@ app.configure(function () {
 
 app.get("/", routes.main);
 app.post("/check", routes.check);
+app.get("*", function (req, res) {
+  res.render("404.html");
+});
 
 var port = process.env.PORT || 5000;
 app.listen(port, function () {

@@ -27,3 +27,24 @@ html {
 p {
   font-family: Ubuntu, "times new roman", times, roman, serif !important;
 }
+
+.ubuntu {
+  font-family: Ubuntu, "times new roman", times, roman, serif !important;
+}
+
+.myCenter {
+  text-align: center;
+  align-items: center;
+}
+
+.myCenter > h1 {
+  font-size: 15rem;
+}
+
+.myCenter > p {
+  font-size: 2rem;
+}
+
+.myCenter > a {
+  font-size: 2rem;
+}
