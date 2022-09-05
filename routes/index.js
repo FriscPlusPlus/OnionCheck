@@ -55,12 +55,40 @@ const check = async (aLinks) => {
   return aLinks;
 };
 
+const getMessage = (data) => {
+  let msg,
+    countInvalid = 0,
+    countOnline = 0;
+  for (let i = 0; i < data.length; i++) {
+    if (data[i].online) {
+      countOnline += 1;
+    }
+    if (!data[i].valid) {
+      countInvalid += 1;
+    }
+  }
+  if (countOnline === data.length) {
+    msg = "It seems like all of them are online!";
+  } else if (countInvalid === data.length) {
+    msg = "It seems like all the given link are invalid!";
+  } else if (countInvalid === 0 && countOnline === 0) {
+    msg = "It seems like all the given link are offline!";
+  } else if (countInvalid === 0 && countOnline > 0) {
+    msg = "It seems like some of them are online!";
+  }
+  return msg;
+};
+
 exports.main = function (req, res) {
   res.render("main.html");
 };
 
 exports.check = async function (req, res) {
   let aLinks = cleanLinks(req.body.links.split("\n"));
-  let results = await check(aLinks);
-  res.render("results.html", { results });
+  let data = await check(aLinks);
+  let results = {
+    data,
+    message: getMessage(data),
+  };
+  res.render("results.html", results);
 };
