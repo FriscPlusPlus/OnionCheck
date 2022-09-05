@@ -73,7 +73,7 @@ const getMessage = (data) => {
     msg = "It seems like all the given link are invalid!";
   } else if (countInvalid === 0 && countOnline === 0) {
     msg = "It seems like all the given link are offline!";
-  } else if (countInvalid === 0 && countOnline > 0) {
+  } else if (countInvalid > 0 && countOnline > 0) {
     msg = "It seems like some of them are online!";
   }
   return msg;
@@ -90,5 +90,6 @@ exports.check = async function (req, res) {
     data,
     message: getMessage(data),
   };
-  res.render("results.html", results);
+  console.log(results);
+  res.render("results.html", { results });
 };

@@ -1,11 +1,11 @@
 <section class="section customPadding">
   <div class="content is-centered">
-  <h1 class="title">It seems like some of them are online!</h1>
-    <% for(var i = 0; i < results.length; i++) { %>
+  <h1 class="title"><%= results.message %></h1>
+    <% for(var i = 0; i < results.data.length; i++) { %>
     <div class="list-item box">
       <div class="list-item-image">
         <figure class="image is-64x64">
-          <% if (results[i].valid) { %> <% if(results[i].online) { %>
+          <% if (results.data[i].valid) { %> <% if(results.data[i].online) { %>
           <img class="is-rounded" src="img/tick.png" />
           <% } else { %>
           <img class="is-rounded" src="img/error.png" />
@@ -17,12 +17,12 @@
 
       <div class="list-item-content">
         <div class="list-item-title">
-          <a target="_blank" href="<%= results[i].url %>"
-            ><%= results[i].url %></a
+          <a target="_blank" href="<%= results.data[i].url %>"
+            ><%= results.data[i].url %></a
           >
         </div>
         <div class="list-item-description">
-          <% if (results[i].valid) { %> <% if(results[i].online) { %> Looks like
+          <% if (results.data[i].valid) { %> <% if(results.data[i].online) { %> Looks like
           this url is up. <% } else { %> Ohh! It looks like this url is offline.
           <% } %> <% } else { %> The given url is invalid. Check
           <a
