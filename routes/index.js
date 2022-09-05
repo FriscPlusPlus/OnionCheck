@@ -7,7 +7,7 @@ const cleanLinks = (aLinks) => {
     lengthCount = aLinks.length > 10 ? 10 : aLinks.length,
     link;
   for (i = 0; i < lengthCount; i++) {
-    link = addProtocl(aLinks[i].replace("\r", ""));
+    link = addProtocl(aLinks[i].replace("\r", "").replace(" ", ""));
     cleanUrls.push({
       url: link,
       valid: isValidUrl(link),

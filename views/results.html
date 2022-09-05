@@ -1,28 +1,39 @@
 <section class="section">
-  <table class="table">
-    <thead>
-      <tr>
-        <th>Link</th>
-        <th>Results</th>
-      </tr>
-    </thead>
-    <tbody>
-      <% for(var i = 0; i < results.length; i++) { %>
-      <tr class="<%= results[i].online ? 'is-selected' : '' %>">
-        <td>
+  <h1 class="title">It seems like some of them are online!</h1>
+  <div class="list">
+    <% for(var i = 0; i < results.length; i++) { %>
+    <div class="list-item box">
+      <div class="list-item-image">
+        <figure class="image is-64x64">
+          <% if (results[i].valid) { %> <% if(results[i].online) { %>
+          <img class="is-rounded" src="img/tick.png" />
+          <% } else { %>
+          <img class="is-rounded" src="img/error.png" />
+          <% } %> <% } else { %>
+          <img class="is-rounded" src="img/invalid.png" />
+          <% } %>
+        </figure>
+      </div>
+
+      <div class="list-item-content">
+        <div class="list-item-title">
           <a target="_blank" href="<%= results[i].url %>"
             ><%= results[i].url %></a
           >
-        </td>
-        <% if (results[i].valid) { %> <% if(results[i].online) { %>
-        <td>Url is online</td>
-        <% } else { %>
-        <td>Url is offline</td>
-        <% } %> <% } else { %>
-        <td>Url not valid</td>
-        <% } %>
-      </tr>
-      <% } %>
-    </tbody>
-  </table>
+        </div>
+        <div class="list-item-description">
+          <% if (results[i].valid) { %> <% if(results[i].online) { %> Looks like
+          this url is up. <% } else { %> Ohh! It looks like this url is offline.
+          <% } %> <% } else { %> The given url is invalid. Check
+          <a
+            target="_blank"
+            href="https://en.wikipedia.org/wiki/.onion#:~:text=8%20External%20links-,Format,long%20for%20V3%20onion%20services."
+            >here</a
+          >
+          how an onion should look like. <% } %>
+        </div>
+      </div>
+    </div>
+    <% } %>
+  </div>
 </section>
