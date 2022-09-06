@@ -27,7 +27,7 @@ const addProtocl = (link) => {
 
 const isValidUrl = (urlString) => {
   try {
-    if (urlString.split(".")[1] !== "onion") {
+    if (urlString.split(".")[1].split("/")[0] !== "onion") {
       urlString = false;
     }
     return Boolean(new URL(urlString.replace(" ", "")));
