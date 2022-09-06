@@ -66,8 +66,8 @@ p {
   padding-top: 4rem;
 }
 
-#donate {
-  height: 80vh;
+.fullpage {
+  height: 100vh;
   padding-top: 11vh;
 }
 
@@ -101,4 +101,9 @@ p {
 .breakWord {
   word-break: break-all;
   color: #363636;
+}
+
+#home > * {
+  display: block;
+  margin: 30px 0;
 }
