@@ -1,11 +1,11 @@
-<div style="display:flex;"><img style="width: 5rem;height: 6.5rem" src="public/img/onion.png" /><span style="color: #ff4500;font-size:5rem;">Onion</span><span style="color: #143d59;font-size:5rem;">Check</span></div>
+<img src="gh_logo/logo.png"/>
 
 > Are this onion services online?
 
 # Table of Contents
 
 - [General](#general)
-    - [What is this?](#general)
+    - [What is this?](#what-is-this)
     - [Philosophy](#philosophy)
 - [Install](#usage)
 - [Contributing](#contributing)
