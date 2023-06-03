@@ -1,10 +1,10 @@
 {
-  "name": "template",
+  "name": "OnionChekc",
   
   "author" : {
-	"name": "Nicholas Johnson",
-	"email": "nejohnson2@gmail.com",
-	"url": "http://www.nejohnson2.com"
+	"name": "Firas Jelassi",
+	"email": "firasroudi@gmail.com",
+	"url": "https://jelassi.me"
   },
   "scripts": {
     "start": "nodemon app.js"
@@ -18,8 +18,4 @@
     "axios": "^0.24.0",
     "socks-proxy-agent": "^7.0.0"
   },
-  "engines": {
-    "node": "0.8.x",
-    "npm": "1.1.x"
-  }
 }
